@@ -25,6 +25,7 @@ const Header = (props) => {
     font-size: 32px;
     font-weight: bold;
     color: ${colorPrimary};
+    cursor: pointer;
   `;
   const ProfilePane = styled.div`
     display: flex;

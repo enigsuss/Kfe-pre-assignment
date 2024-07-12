@@ -5,7 +5,56 @@ import imgAd1 from "../img/ad1.png";
 import imgAd2 from "../img/ad2.png";
 import AdPaneBackground1 from "./contents/AdPaneBackground1";
 import AdPaneBackground2 from "./contents/AdPaneBackground2";
+import ControlRentOptions from "./contents/ControlRentOptions";
+import { ArrowUpDown } from "lucide-react";
 
+const ContentWrapper = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${(props) => props.colorBackground};
+  width: 1440px;
+  height: 2120px;
+  padding: 32px 64px;
+`;
+const ContentArea = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  width: 100%;
+  height: 1900px;
+`;
+
+const AdContainer = styled.div`
+  display: flex;
+  position: relative;
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+`;
+const AdArea = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+const ControlArea = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+`;
+const SwitchWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: ${(props) => props.color};
+  border-radius: 10px;
+  cursor: pointer;
+`;
 const Content = (props) => {
   const { colorBackground, colorPrimary, colorSecondary } = props.init;
 
@@ -24,50 +73,36 @@ const Content = (props) => {
     colorSecondary: "#54A6FF",
   };
 
-  const ContentWrapper = styled.div`
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: ${colorBackground};
-    width: 1440px;
-    height: 2120px;
-    padding: 32px 64px;
-  `;
-  const ContentMain = styled.div`
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    background-color: lightgrey;
-    width: 100%;
-    height: 764px;
-  `;
-  const ContentSub = styled.div`
-    background-color: lightblue;
-    width: 100%;
-    height: 1356px;
-  `;
-  const AdPaneContainer = styled.div`
-    display: flex;
-    position: relative;
-    width: 640px;
-    height: 360px;
-    overflow: hidden;
-  `;
-
   return (
-    <ContentWrapper>
-      <ContentMain>
-        <AdPaneContainer>
-          <AdPane init={initAdPane1} />
-          <AdPaneBackground1 />
-        </AdPaneContainer>
-        <AdPaneContainer>
-          <AdPane init={initAdPane2} />
-          <AdPaneBackground2 />
-        </AdPaneContainer>
-      </ContentMain>
-      <ContentSub></ContentSub>
+    <ContentWrapper colorBackground={colorBackground}>
+      <ContentArea>
+        <AdArea>
+          <AdContainer>
+            <AdPane init={initAdPane1} />
+            <AdPaneBackground1 />
+          </AdContainer>
+          <AdContainer>
+            <AdPane init={initAdPane2} />
+            <AdPaneBackground2 />
+          </AdContainer>
+        </AdArea>
+
+        <ControlArea>
+          <ControlRentOptions
+            name="Pick - Up"
+            colorPrimary={colorPrimary}
+            colorSecondary={colorSecondary}
+          />
+          <SwitchWrapper color={colorPrimary}>
+            <ArrowUpDown color="white" size="24" />
+          </SwitchWrapper>
+          <ControlRentOptions
+            name="Drop - Off"
+            colorPrimary="#54A6FF"
+            colorSecondary={colorSecondary}
+          />
+        </ControlArea>
+      </ContentArea>
     </ContentWrapper>
   );
 };
