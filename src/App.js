@@ -20,7 +20,8 @@ const App = () => {
   };
   const initContent = {
     colorPrimary: "#3563E9",
-    colorSecondary: "#90A3BF",
+    colorSecondary: "#54A6FF",
+    colorTertiary: "#90A3BF",
     colorBackground: "#F6F7F9",
   };
 

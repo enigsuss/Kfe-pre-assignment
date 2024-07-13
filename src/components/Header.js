@@ -8,7 +8,7 @@ import {
   CircleUserRound,
 } from "lucide-react";
 import styled from "styled-components";
-import imgProfile from "../img/profile.png";
+import imgProfile from "../resources/profile.png";
 
 const Header = (props) => {
   const { title, colorPrimary, colorSecondary, colorBorder } = props.init;

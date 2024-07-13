@@ -1,0 +1,168 @@
+[
+    {
+        "name": "All New Rush",
+        "type": "SUV",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXQ6FRPTDhJPRzdjoMZV9oW6OiDpyW3KahA&s",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0,
+        "salePrice": 72.0
+    },
+    {
+        "name": "CR-V",
+        "type": "SUV",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i159614282/2021_honda_cr_v_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": true,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "All New Terios",
+        "type": "SUV",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKNkA09b3Nb1GCTXKlrWTcXxT8ajCCfXapFg&s",
+        "fuelCapacity": 90,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 74.0
+    },
+    {
+        "name": "CR-V",
+        "type": "SUV",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i159614282/2021_honda_cr_v_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": true,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "MG ZX Exclusive",
+        "type": "Hatchback",
+        "image": "https://www.carsized.com/resources/mg/zs/d/2020/sl_279123114_mg-zs-2020-side-view_4x.png",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 4,
+        "isLiked": true,
+        "originalPrice": 80.0,
+        "salePrice": 76.0
+    },
+    {
+        "name": "New MG ZS",
+        "type": "SUV",
+        "image": "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/4cjpuyuy/856370-drive-various4.png",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "MG ZX Exclusive",
+        "type": "Hatchback",
+        "image": "https://www.carsized.com/resources/mg/zs/d/2020/sl_279123114_mg-zs-2020-side-view_4x.png",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 4,
+        "isLiked": true,
+        "originalPrice": 80.0,
+        "salePrice": 76.0
+    },
+    {
+        "name": "New MG ZS",
+        "type": "SUV",
+        "image": "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/4cjpuyuy/856370-drive-various4.png",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "All New Rush",
+        "type": "SUV",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXQ6FRPTDhJPRzdjoMZV9oW6OiDpyW3KahA&s",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0,
+        "salePrice": 72.0
+    },
+    {
+        "name": "CR-V",
+        "type": "SUV",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i159614282/2021_honda_cr_v_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": true,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "All New Terios",
+        "type": "SUV",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKNkA09b3Nb1GCTXKlrWTcXxT8ajCCfXapFg&s",
+        "fuelCapacity": 90,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 74.0
+    },
+    {
+        "name": "CR-V",
+        "type": "SUV",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i159614282/2021_honda_cr_v_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": true,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "MG ZX Exclusive",
+        "type": "Hatchback",
+        "image": "https://www.carsized.com/resources/mg/zs/d/2020/sl_279123114_mg-zs-2020-side-view_4x.png",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 4,
+        "isLiked": true,
+        "originalPrice": 80.0,
+        "salePrice": 76.0
+    },
+    {
+        "name": "New MG ZS",
+        "type": "SUV",
+        "image": "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/4cjpuyuy/856370-drive-various4.png",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0
+    },
+    {
+        "name": "MG ZX Exclusive",
+        "type": "Hatchback",
+        "image": "https://www.carsized.com/resources/mg/zs/d/2020/sl_279123114_mg-zs-2020-side-view_4x.png",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 4,
+        "isLiked": true,
+        "originalPrice": 80.0,
+        "salePrice": 76.0
+    },
+    {
+        "name": "New MG ZS",
+        "type": "SUV",
+        "image": "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/4cjpuyuy/856370-drive-various4.png",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 6,
+        "isLiked": false,
+        "originalPrice": 80.0
+    }
+]

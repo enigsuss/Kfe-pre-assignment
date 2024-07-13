@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Koenigsegg",
+        "type": "Sport",
+        "image": "https://car-images.bauersecure.com/wp-images/3392/k-egg_jesko_104.jpg",
+        "fuelCapacity": 90,
+        "gearType": "Manual",
+        "seats": 2,
+        "isLiked": true,
+        "originalPrice": 99.0
+    },
+    {
+        "name": "Nissan GT-R",
+        "type": "Sport",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i4762/2015_nissan_gt_r_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 2,
+        "isLiked": false,
+        "originalPrice": 100.0,
+        "salePrice": 80.0
+    },
+    {
+        "name": "Rolls-Royce",
+        "type": "Sedan",
+        "image": "https://robbreport.com/wp-content/uploads/2014/05/1399171.jpg?w=1000",
+        "fuelCapacity": 70,
+        "gearType": "Manual",
+        "seats": 4,
+        "isLiked": true,
+        "originalPrice": 96.0
+    },
+    {
+        "name": "Koenigsegg",
+        "type": "Sport",
+        "image": "https://car-images.bauersecure.com/wp-images/3392/k-egg_jesko_104.jpg",
+        "fuelCapacity": 90,
+        "gearType": "Manual",
+        "seats": 2,
+        "isLiked": true,
+        "originalPrice": 100.0,
+        "salePrice": 80.0
+    },
+    {
+        "name": "Koenigsegg",
+        "type": "Sport",
+        "image": "https://car-images.bauersecure.com/wp-images/3392/k-egg_jesko_104.jpg",
+        "fuelCapacity": 90,
+        "gearType": "Manual",
+        "seats": 2,
+        "isLiked": true,
+        "originalPrice": 99.0
+    },
+    {
+        "name": "Nissan GT-R",
+        "type": "Sport",
+        "image": "https://cars.usnews.com/static/images/Auto/izmo/i4762/2015_nissan_gt_r_sideview.jpg",
+        "fuelCapacity": 80,
+        "gearType": "Manual",
+        "seats": 2,
+        "isLiked": false,
+        "originalPrice": 100.0,
+        "salePrice": 80.0
+    }
+]
