@@ -24,12 +24,16 @@ const App = () => {
     colorTertiary: "#90A3BF",
     colorBackground: "#F6F7F9",
   };
+  const initFooter = {
+    colorPrimary: "#3563E9",
+    colorSecondary: "rgba(19,19,19,0.6)",
+  };
 
   return (
     <AppContainer>
-      <Header init={initHeader}></Header>
+      <Header init={initHeader} />
       <Content init={initContent} />
-      <Footer />
+      <Footer init={initFooter} />
     </AppContainer>
   );
 };
