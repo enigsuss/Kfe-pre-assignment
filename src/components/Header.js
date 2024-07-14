@@ -9,9 +9,14 @@ import {
 } from "lucide-react";
 import styled from "styled-components";
 import imgProfile from "../resources/profile.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
   const { title, colorPrimary, colorSecondary, colorBorder } = props.init;
+  const navigate = useNavigate();
+  const handleTitleClick = () => {
+    navigate("/");
+  };
 
   const HeaderWrapper = styled.div`
     display: flex;
@@ -109,7 +114,7 @@ const Header = (props) => {
 
   return (
     <HeaderWrapper>
-      <HeaderTitle>{title}</HeaderTitle>
+      <HeaderTitle onClick={handleTitleClick}>{title}</HeaderTitle>
       <InputWrapper>
         <Search color={colorSecondary} size={35} />
         <Input placeholder="Search something here" />

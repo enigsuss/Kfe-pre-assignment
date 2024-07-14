@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import styled from "styled-components";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const AppContainer = styled.div`
   display: flex;
@@ -11,7 +12,8 @@ const AppContainer = styled.div`
   width: 100%;
   height: 100%;
 `;
-const App = () => {
+
+const Home = () => {
   const initHeader = {
     title: "KernelRent",
     colorPrimary: "#3563e9",
@@ -35,6 +37,16 @@ const App = () => {
       <Content init={initContent} />
       <Footer init={initFooter} />
     </AppContainer>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 };
 
