@@ -8,6 +8,8 @@ import AdPaneBackground2 from "./contents/AdPaneBackground2";
 import ControlRentOptions from "./contents/ControlRentOptions";
 import { ArrowUpDown } from "lucide-react";
 import Catalog from "./contents/Catalog";
+import dataPopularCars from "../resources/popular-car.json";
+import dataRecommendationCars from "../resources/recommendation-car.json";
 
 const ContentWrapper = styled.div`
   box-sizing: border-box;
@@ -16,14 +18,13 @@ const ContentWrapper = styled.div`
   align-items: center;
   background-color: ${(props) => props.colorBackground};
   width: 1440px;
-  height: 2120px;
+  height: 3300px;
   padding: 32px 64px;
 `;
 const ContentArea = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
   width: 100%;
   height: 1900px;
 `;
@@ -61,23 +62,36 @@ const PopularCarArea = styled.div`
   flex-direction: column;
 `;
 const GroupLabel = styled.span`
-  width: 132px;
+  width: 196px;
   height: 44px;
-  text-align: center;
   line-height: 2.8;
   font-weight: 500;
   margin-bottom: 20px;
+  margin-left: 20px;
   color: ${(props) => props.color};
 `;
 const CarContainer = styled.div`
   display: flex;
   width: 100%;
-  background: gray;
+  margin-bottom: 32px;
 `;
+const RecomandCarArea = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const chunkArray = (array, chunkSize) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
+};
 
 const Content = (props) => {
   const { colorBackground, colorPrimary, colorSecondary, colorTertiary } =
     props.init;
+  const carPopularChunks = chunkArray(dataPopularCars, 4);
+  const carRecommendChunks = chunkArray(dataRecommendationCars, 4);
 
   const initAdPane1 = {
     head: "The Best Platform for Car Rental",
@@ -126,13 +140,35 @@ const Content = (props) => {
 
         <PopularCarArea>
           <GroupLabel color={colorTertiary}>Popular Car</GroupLabel>
-          <CarContainer>
-            <Catalog
-              colorPrimary={colorPrimary}
-              colorSecondary={colorTertiary}
-            />
-          </CarContainer>
+          {carPopularChunks.map((carChunk, index) => (
+            <CarContainer key={index}>
+              {carChunk.map((car, carIndex) => (
+                <Catalog
+                  key={carIndex}
+                  colorPrimary={colorPrimary}
+                  colorSecondary={colorTertiary}
+                  data={car}
+                />
+              ))}
+            </CarContainer>
+          ))}
         </PopularCarArea>
+
+        <RecomandCarArea>
+          <GroupLabel color={colorTertiary}>Recommendation Car</GroupLabel>
+          {carRecommendChunks.map((carChunk, index) => (
+            <CarContainer key={index}>
+              {carChunk.map((car, carIndex) => (
+                <Catalog
+                  key={carIndex}
+                  colorPrimary={colorPrimary}
+                  colorSecondary={colorTertiary}
+                  data={car}
+                />
+              ))}
+            </CarContainer>
+          ))}
+        </RecomandCarArea>
       </ContentArea>
     </ContentWrapper>
   );

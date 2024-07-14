@@ -10,6 +10,10 @@ const CatalogWrapper = styled.div`
   padding: 24px;
   border-radius: 10px;
   background-color: white;
+  margin-right: 32px;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 `;
 const CatalogContainer = styled.div`
   position: relative;
@@ -75,10 +79,23 @@ const RentContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const PriceContainer = styled.div``;
+const PriceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const PriceContainer = styled.div`
+  width: 128px;
+`;
 const Price = styled.span`
   font-size: 20px;
   font-weight: 700;
+`;
+const PriceOriginal = styled.span`
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+  color: ${(props) => props.color};
 `;
 const Day = styled.span`
   font-size: 14px;
@@ -93,9 +110,22 @@ const RentButton = styled.button`
   font-size: 16px;
   width: 116px;
   height: 44px;
+  cursor: pointer;
 `;
-const Catalog = ({ colorPrimary, colorSecondary }) => {
-  const [liked, setLiked] = useState(false);
+const Catalog = ({ colorPrimary, colorSecondary, data }) => {
+  const {
+    name,
+    type,
+    image,
+    fuelCapacity,
+    gearType,
+    seats,
+    isLiked,
+    salePrice,
+    originalPrice,
+  } = data;
+  const [liked, setLiked] = useState(isLiked);
+
   const toggleLike = () => {
     setLiked(!liked);
   };
@@ -103,7 +133,7 @@ const Catalog = ({ colorPrimary, colorSecondary }) => {
     <CatalogWrapper>
       <CatalogContainer>
         <CarNameContainer>
-          <CarName>Koenigsegg</CarName>
+          <CarName>{name}</CarName>
           <LikeContainer onClick={toggleLike}>
             {liked ? (
               <LikedWrapper>
@@ -116,35 +146,44 @@ const Catalog = ({ colorPrimary, colorSecondary }) => {
             )}
           </LikeContainer>
         </CarNameContainer>
-        <CarClass color={colorSecondary}>Sport</CarClass>
+        <CarClass color={colorSecondary}>{type}</CarClass>
         <CarImageWrapper>
-          <CarImage
-            src={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXQ6FRPTDhJPRzdjoMZV9oW6OiDpyW3KahA&s"
-            }
-            alt="carImage"
-          />
+          <CarImage src={image} alt="carImage" />
         </CarImageWrapper>
         <CarInfoContainer>
           <CarInfoWrapper>
             <Fuel color={colorSecondary} />
-            <CarInfoSpan color={colorSecondary}>90L</CarInfoSpan>
+            <CarInfoSpan color={colorSecondary}>{fuelCapacity}L</CarInfoSpan>
           </CarInfoWrapper>
           <CarInfoWrapper>
             <ShipWheel color={colorSecondary} />
-            <CarInfoSpan color={colorSecondary}>Manual</CarInfoSpan>
+            <CarInfoSpan color={colorSecondary}>{gearType}</CarInfoSpan>
           </CarInfoWrapper>
           <CarInfoWrapper>
             <UsersRound color={colorSecondary} />
-            <CarInfoSpan color={colorSecondary}>2 people</CarInfoSpan>
+            <CarInfoSpan color={colorSecondary}>{seats} people</CarInfoSpan>
           </CarInfoWrapper>
         </CarInfoContainer>
         <RentWrapper>
           <RentContainer>
-            <PriceContainer>
-              <Price>$00.00/</Price>
-              <Day color={colorSecondary}> day</Day>
-            </PriceContainer>
+            <PriceWrapper>
+              {salePrice ? (
+                <PriceContainer>
+                  <Price>${salePrice}.00/</Price>
+                  <Day color={colorSecondary}> day</Day>
+                </PriceContainer>
+              ) : (
+                <PriceContainer>
+                  <Price>${originalPrice}.00/</Price>
+                  <Day color={colorSecondary}> day</Day>
+                </PriceContainer>
+              )}
+              {salePrice && (
+                <PriceOriginal color={colorSecondary}>
+                  ${originalPrice}.00
+                </PriceOriginal>
+              )}
+            </PriceWrapper>
             <RentButton color={colorPrimary}>Rent Now</RentButton>
           </RentContainer>
         </RentWrapper>
