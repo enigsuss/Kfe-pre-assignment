@@ -1,6 +1,6 @@
 # KFE1 사전과제
 
-React를 사용한 클론코딩 페이지입니다.
+React를 사용한 KernelRent 클론코딩 페이지입니다.
 
 ## 기술 스택
 - React
